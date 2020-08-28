@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/logo_cellep_branco" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/edtLoginEmail"
         android:layout_width="281dp"
         android:layout_height="49dp"
         android:layout_marginStart="60dp"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/edtLoginSenha"
         android:layout_width="281dp"
         android:layout_height="45dp"
         android:layout_marginStart="60dp"
@@ -45,17 +45,17 @@
         android:layout_marginEnd="60dp"
         android:backgroundTint="@android:color/background_light"
         android:ems="10"
-        android:hint="Password"
+        android:hint="Senha"
         android:inputType="textPassword"
         android:textColor="@android:color/background_light"
         android:textColorHint="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/edtLoginEmail" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnLoginEntrar"
         android:layout_width="207dp"
         android:layout_height="56dp"
         android:layout_marginStart="100dp"
@@ -63,14 +63,15 @@
         android:layout_marginEnd="100dp"
         android:text="Entrar"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoginCadastrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/edtLoginSenha"
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnLoginCadastrar"
         android:layout_width="207dp"
         android:layout_height="56dp"
         android:layout_marginTop="16dp"
@@ -79,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnLoginEntrar" />
 
     <ImageView
         android:id="@+id/imageView2"
