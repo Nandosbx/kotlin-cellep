@@ -97,6 +97,8 @@
         android:id="@+id/spnCadastroGenero"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:dropDownWidth="wrap_content"
+        android:textAlignment="textStart"
         app:layout_constraintBottom_toTopOf="@+id/btnCadastroCadastrar"
         app:layout_constraintTop_toBottomOf="@+id/edtCadastroSenha" />
 

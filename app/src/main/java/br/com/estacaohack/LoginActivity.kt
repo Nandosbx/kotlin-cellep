@@ -1,5 +1,6 @@
 package br.com.estacaohack
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -10,7 +11,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        //Executing the clicking button
+        //Executar o clique do botão entrar
         btnLoginEntrar.setOnClickListener {
 
             //Input data
@@ -28,6 +29,14 @@ class LoginActivity : AppCompatActivity() {
                 //Showing error message to user
                 Toast.makeText(this, "E-mail ou senha inválidos.", Toast.LENGTH_LONG).show()
             }
+        }
+
+        //Executar o clique do botão cadastrar
+        btnLoginCadastrar.setOnClickListener {
+            //Abrindo a tela de cadastro
+            val mIntent = Intent(this, CadastroActivity::class.java)
+            startActivity(mIntent)
+            finish()
         }
     }
 }
