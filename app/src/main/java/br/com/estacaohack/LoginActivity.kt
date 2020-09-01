@@ -1,5 +1,6 @@
 package br.com.estacaohack
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -26,8 +27,28 @@ class LoginActivity : AppCompatActivity() {
                 edtLoginSenha.error = "Campo obrigatório."
                 edtLoginSenha.requestFocus()
             } else {
-                //Showing error message to user
-                Toast.makeText(this, "E-mail ou senha inválidos.", Toast.LENGTH_LONG).show()
+                //Acessando o arquivo de preferências compartilhadas
+                val sharedPrefs = getSharedPreferences("cadastro_$email", Context.MODE_PRIVATE)
+
+                //Recuperando dados de Shared Preferences
+                val emailPrefs = sharedPrefs.getString("EMAIL", "")
+                val senhaPrefs = sharedPrefs.getString("SENHA", "")
+
+                //Verificando o email que o usuário
+                if (email == emailPrefs && senha == senhaPrefs) {
+                    Toast.makeText(this, "Usuário logado com sucesso", Toast.LENGTH_LONG).show()
+
+                    //Abrindo a Main Activity
+                    val mIntent = Intent(this, MainActivity::class.java)
+
+                    //Passando informações através do Intent
+                    mIntent.putExtra("INTENT_EMAIL", email)
+                    startActivity(mIntent)
+                    finish()
+                } else {
+                    //Showing error message to user
+                    Toast.makeText(this, "E-mail ou senha inválidos.", Toast.LENGTH_LONG).show()
+                }
             }
         }
 

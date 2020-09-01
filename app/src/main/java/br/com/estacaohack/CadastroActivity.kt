@@ -1,5 +1,7 @@
 package br.com.estacaohack
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -41,6 +43,35 @@ class CadastroActivity : AppCompatActivity() {
 
                 //Apresentando um toast de erro ao usuário
                 Toast.makeText(this, "Preencha todos os campos", Toast.LENGTH_LONG).show()
+            } else {
+                //Todos os campos foram preenchidos
+
+
+                //Criando ou acessando o arquivo de preferências compartilhadas
+                val sharedPrefs = getSharedPreferences("cadastro_$email", Context.MODE_PRIVATE)
+
+                //Editar o arquivo de preferências compartilhadas
+                val editPrefs = sharedPrefs.edit()
+
+                //Preparando os dados a serem salvos no arquivo
+                editPrefs.putString("NOME", nome)
+                editPrefs.putString("SOBRENOME", sobrenome)
+                editPrefs.putString("EMAIL", email)
+                editPrefs.putString("SENHA", senha)
+                editPrefs.putString("GENERO", genero)
+
+                //Salvando os dados no arquivo Shared Preferences
+                editPrefs.apply()
+
+                //Abrindo a Main Activity
+                val mIntent = Intent(this, MainActivity::class.java)
+
+                //Passando informações através do Intent
+                mIntent.putExtra("INTENT_EMAIL", email)
+                startActivity(mIntent)
+
+                //Tirando todas as telas do empilhamento
+                finishAffinity()
             }
         }
     }
