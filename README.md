@@ -1,7 +1,5 @@
 <h1 align="center">Cellep/Madcode/Estação Hack Kotlin App</h1>
-<p align="center">
-<img src=""/>
-</p>
+
 
 
 ![GitHub top language](https://img.shields.io/github/languages/count/Nandosbx/kotlin-cellep) 
@@ -15,6 +13,8 @@
 <img src="./.github/celleplogin.png" width=20% height=20%/>
 
 <img src="./.github/cellepregister.png" width=20% height=20%/>
+
+<img src="./.github/cellepwelcoming.png" width=20% height=20%/>
 
 <img src="./.github/celleplogout.png" width=20% height=20%/>
 

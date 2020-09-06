@@ -2,9 +2,12 @@ package br.com.estacaohack
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_cadastro.*
 import kotlinx.android.synthetic.main.activity_login.*
@@ -21,11 +24,13 @@ class CadastroActivity : AppCompatActivity() {
         //Criando um adapter para a list e o Spinner
         val generoAdapter = ArrayAdapter(
             this,
-            android.R.layout.simple_spinner_dropdown_item,
+            android.R.layout.simple_spinner_item,
             listaGenero
         )
 
-        // Adicion ar o adapter ao spinner
+
+
+        // Adicionar o adapter ao spinner
         spnCadastroGenero.adapter = generoAdapter
 
         //
@@ -48,7 +53,7 @@ class CadastroActivity : AppCompatActivity() {
 
 
                 //Criando ou acessando o arquivo de preferências compartilhadas
-                val sharedPrefs = getSharedPreferences("cadastro_$email", Context.MODE_PRIVATE)
+                val sharedPrefs = getSharedPreferences("cadastro_$email", MODE_PRIVATE)
 
                 //Editar o arquivo de preferências compartilhadas
                 val editPrefs = sharedPrefs.edit()
