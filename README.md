@@ -12,7 +12,7 @@
 
 <img src="./.github/celleplogin.png" width=20% height=20%/>
 
-<img src="./.github/cellepregister.png" width=20% height=20%/>
+<img src="./.github/cellepregister.png" width=20% height=20%/></br>
 
 <img src="./.github/cellepwelcoming.png" width=20% height=20%/>
 
