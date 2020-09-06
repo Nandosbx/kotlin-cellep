@@ -9,9 +9,7 @@
 <h2>	📷 MOBILE</h2></h2>
 <div align='center'>
 <img src="./.github/cellepestacaohack.png" width=20% height=20%/>
-
 <img src="./.github/celleplogin.png" width=20% height=20%/>
-
 <img src="./.github/cellepregister.png" width=20% height=20%/></br>
 
 <img src="./.github/cellepwelcoming.png" width=20% height=20%/>
